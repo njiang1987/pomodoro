@@ -167,6 +167,18 @@
 	}
 }
 
+- (void)oncePerSecondInterrupted:(NSNotification*) notification{
+    NSInteger time = [[notification object] integerValue];
+    NSString* msg = nil;
+    if (time == 0) {
+        msg = @"restart";
+    }
+    else{
+        msg = [NSString stringWithFormat:@"%ld", (long)time];
+    }
+    [speech startSpeakingString:msg];
+}
+
 #pragma mark ---- Lifecycle methods ----
 
 - (void)awakeFromNib {

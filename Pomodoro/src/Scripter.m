@@ -44,7 +44,8 @@
 	NSAppleScript* applescript = [scripts objectForKey:scriptId];
 	if (nil == applescript) {
 		NSString* scriptFileName = [[NSBundle mainBundle] pathForResource: scriptId ofType: @"applescript"];
-		applescript = [[[NSAppleScript alloc] initWithContentsOfURL: [NSURL fileURLWithPath: scriptFileName] error: nil] autorelease];
+//		applescript = [[[NSAppleScript alloc] initWithContentsOfURL: [NSURL fileURLWithPath: scriptFileName] error: nil] autorelease];
+        applescript = [[[NSAppleScript alloc] initWithSource:scriptFileName] autorelease];
 		[applescript compileAndReturnError:nil];
 		[scripts setObject:applescript forKey:scriptId];
 	} 

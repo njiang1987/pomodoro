@@ -73,4 +73,9 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:_PMPomoOncePerSecondBreak object: [NSNumber numberWithLong:time]];
 }
 
+- (void) oncePersecondInterrupted:(NSInteger)time
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:_PMPomoOncePerSecondInterrupted object: [NSNumber numberWithLong:time]];
+}
+
 @end

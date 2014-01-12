@@ -37,7 +37,7 @@
 #include <CoreServices/CoreServices.h>
 
 @implementation PomodoroController
-
+@synthesize testItem;
 @synthesize startPomodoro, finishPomodoro, invalidatePomodoro, interruptPomodoro, internalInterruptPomodoro, resumePomodoro;
 @synthesize growl, pomodoro, longBreakCounter, longBreakCheckerTimer;
 @synthesize prefs, scriptPanel, namePanel, breakCombo, initialTimeCombo, interruptCombo, longBreakCombo, longBreakResetComboTime, pomodorosForLong;
@@ -494,7 +494,6 @@
 
 	
 }
-
 
 #pragma mark ---- Lifecycle methods ----
 

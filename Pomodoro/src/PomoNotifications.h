@@ -34,6 +34,7 @@
 #define _PMPomoBreakFinished @"PMPomoBreakFinished"
 #define _PMPomoOncePerSecond @"PMPomoOncePerSecond"
 #define _PMPomoOncePerSecondBreak @"PMPomoOncePerSecondBreak"
+#define _PMPomoOncePerSecondInterrupted @"PMPomoOncePerSecondInterrupted"
 #define _PMPomoNameGiven @"PMPomoNameGiven"
 #define _PMPomoNameCanceled @"PMPomoNameCanceled"
 #define _PMPomoWillStart @"PMPomoWillStart"

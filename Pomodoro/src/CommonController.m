@@ -81,6 +81,7 @@
     [self registerForPomodoro:_PMPomoOncePerSecondBreak method:@selector(oncePerSecondBreak:)];
     [self registerForPomodoro:_PMPomoBreakStarted method:@selector(breakStarted:)];
     [self registerForPomodoro:_PMPomoBreakFinished method:@selector(breakFinished:)];
+    [self registerForPomodoro:_PMPomoOncePerSecondInterrupted method:@selector(oncePerSecondInterrupted:)];
 }
 
 #pragma mark ---- Pomodoro notifications methods ----
@@ -116,6 +117,9 @@
 }
 
 - (void) oncePerSecond:(NSNotification*) notification {
+}
+
+- (void) oncePerSecondInterrupted:(NSNotification*) notification {
 }
 
 #pragma mark ---- Lifecycle methods ----

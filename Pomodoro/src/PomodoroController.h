@@ -58,6 +58,7 @@
 	IBOutlet NSMenuItem* internalInterruptPomodoro;
 	IBOutlet NSMenuItem* invalidatePomodoro;
 	IBOutlet NSMenuItem* resumePomodoro;
+    NSMenuItem *testItem;
 	IBOutlet GrowlNotifier* growl;
 	IBOutlet Pomodoro* pomodoro;
     NSInteger longBreakCounter;
@@ -109,6 +110,8 @@
 @property (nonatomic, assign, readonly) IBOutlet NSMenuItem* internalInterruptPomodoro;
 @property (nonatomic, assign, readonly) IBOutlet NSMenuItem* invalidatePomodoro;
 @property (nonatomic, assign, readonly) IBOutlet NSMenuItem* resumePomodoro;
+@property (assign) IBOutlet NSMenuItem *testItem;
+
 
 -(void) keyMute;
 -(void) keyStart;

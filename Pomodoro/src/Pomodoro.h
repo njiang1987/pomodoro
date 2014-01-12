@@ -38,6 +38,7 @@
 - (void) pomodoroResumed:(id)pomo;
 - (void) breakStarted:(id)pomo;
 - (void) breakFinished:(id)pomo;
+- (void) oncePerSecondInterrupted:(NSInteger) time;
 
 @required
 
@@ -64,9 +65,10 @@ enum PomoState {
 	NSInteger resumed;
 
 	NSInteger time;
+    NSInteger interruptedTime;
 	NSTimer *oneSecTimer;
 	NSTimer *breakTimer;
-	NSTimer *interruptionTimer;
+//	NSTimer *interruptionTimer;
 	
 	enum PomoState state;
 
@@ -82,7 +84,7 @@ enum PomoState {
 
 @property (nonatomic, assign) NSTimer* oneSecTimer;
 @property (nonatomic, assign) NSTimer* breakTimer;
-@property (nonatomic, assign) NSTimer* interruptionTimer;
+//@property (nonatomic, assign) NSTimer* interruptionTimer;
 @property (nonatomic, retain) id delegate;
 
 - (id) initWithDuration:(NSInteger) durationTime;
