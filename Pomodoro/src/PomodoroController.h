@@ -34,6 +34,7 @@
 @class Scripter;
 @class PomodoroNotifier;
 @class Pomodoro;
+@class ActivityInventoryController;
 
 @interface PomodoroController : CommonController {
         	
@@ -66,6 +67,7 @@
     PomodoroNotifier* pomodoroNotifier;
     
     ProcessSerialNumber psn;
+    ActivityInventoryController* mpActivityInventoryController;
 	AboutController* about;
 	SplashController* splash;
 	StatsController* stats;
@@ -110,7 +112,6 @@
 @property (nonatomic, assign, readonly) IBOutlet NSMenuItem* internalInterruptPomodoro;
 @property (nonatomic, assign, readonly) IBOutlet NSMenuItem* invalidatePomodoro;
 @property (nonatomic, assign, readonly) IBOutlet NSMenuItem* resumePomodoro;
-@property (assign) IBOutlet NSMenuItem *testItem;
 
 
 -(void) keyMute;
@@ -143,5 +144,11 @@
 -(IBAction) changedCanRestartInBreaks: (id) sender;
 
 -(IBAction) toolBarIconClicked: (id) sender;
+
+/**
+ * Used for to do list and activity inventory
+ */
+- (IBAction)showActivityInventory:(id)sender;
+
 
 @end

@@ -184,6 +184,13 @@
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="25"/>
+                <menuItem title="Activity Inventory" id="2Ve-VC-tKB">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="showActivityInventory:" target="9" id="CZY-FE-ice"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="Pt3-uY-7PR"/>
                 <menuItem title="External Interrupt" enabled="NO" id="22">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
@@ -226,9 +233,6 @@
                     <connections>
                         <binding destination="36" name="value" keyPath="values.mute" id="68"/>
                     </connections>
-                </menuItem>
-                <menuItem title="Test Item" id="2Ve-VC-tKB">
-                    <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="18"/>
                 <menuItem title="About Pomodoro" id="19">
@@ -368,10 +372,10 @@ DQ
                                                     <color key="textColor" red="0.50000762939453125" green="0.0" blue="0.50000762939453125" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <size key="minSize" width="545" height="235"/>
-                                                    <size key="maxSize" width="565" height="10000000"/>
+                                                    <size key="maxSize" width="567" height="10000000"/>
                                                     <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     <size key="minSize" width="545" height="235"/>
-                                                    <size key="maxSize" width="565" height="10000000"/>
+                                                    <size key="maxSize" width="567" height="10000000"/>
                                                 </osaDictionaryScriptView>
                                             </subviews>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -404,10 +408,10 @@ DQ
                                                     <color key="textColor" red="0.50000762939453125" green="0.0" blue="0.50000762939453125" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <size key="minSize" width="545" height="272"/>
-                                                    <size key="maxSize" width="565" height="10000000"/>
+                                                    <size key="maxSize" width="567" height="10000000"/>
                                                     <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     <size key="minSize" width="545" height="272"/>
-                                                    <size key="maxSize" width="565" height="10000000"/>
+                                                    <size key="maxSize" width="567" height="10000000"/>
                                                 </osaDictionaryScriptView>
                                             </subviews>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -486,7 +490,7 @@ DQ
                             <tabViewItem label="Pomodoro" identifier="0" id="104">
                                 <view key="view" id="105">
                                     <rect key="frame" x="0.0" y="0.0" width="810" height="668"/>
-                                    <autoresizingMask key="autoresizingMask"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <box autoresizesSubviews="NO" title="Start and Breaks" borderType="line" id="1324">
                                             <rect key="frame" x="17" y="378" width="648" height="284"/>
@@ -1870,8 +1874,8 @@ DQ
                                                             <font key="font" metaFont="system"/>
                                                         </buttonCell>
                                                         <connections>
-                                                            <binding destination="36" name="enabled" keyPath="values.thingsEnabled" id="381"/>
                                                             <binding destination="36" name="value" keyPath="values.thingsAddingEnabled" id="383"/>
+                                                            <binding destination="36" name="enabled" keyPath="values.thingsEnabled" id="381"/>
                                                         </connections>
                                                     </button>
                                                     <button id="254">
@@ -1893,8 +1897,8 @@ DQ
                                                             <font key="font" metaFont="system"/>
                                                         </buttonCell>
                                                         <connections>
-                                                            <binding destination="36" name="enabled" keyPath="values.omniFocusEnabled" id="387"/>
                                                             <binding destination="36" name="value" keyPath="values.omniFocusAddingEnabled" id="389"/>
+                                                            <binding destination="36" name="enabled" keyPath="values.omniFocusEnabled" id="387"/>
                                                         </connections>
                                                     </button>
                                                     <button id="1428">
@@ -1916,8 +1920,8 @@ DQ
                                                             <font key="font" metaFont="system"/>
                                                         </buttonCell>
                                                         <connections>
-                                                            <binding destination="36" name="enabled" keyPath="values.remindersEnabled" id="1437"/>
                                                             <binding destination="36" name="value" keyPath="values.remindersAddingEnabled" id="1436"/>
+                                                            <binding destination="36" name="enabled" keyPath="values.remindersEnabled" id="1437"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -2020,7 +2024,7 @@ DQ
                                                             <rect key="frame" x="-100" y="-100" width="223" height="15"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </scroller>
-                                                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="37" horizontal="NO" id="1540">
+                                                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="1540">
                                                             <rect key="frame" x="224" y="17" width="15" height="102"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </scroller>

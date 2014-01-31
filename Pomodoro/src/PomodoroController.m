@@ -34,10 +34,10 @@
 #import "ShortcutController.h"
 #import "PomodoroNotifier.h"
 #import "PomoNotifications.h"
+#import "ActivityInventoryController.h"
 #include <CoreServices/CoreServices.h>
 
 @implementation PomodoroController
-@synthesize testItem;
 @synthesize startPomodoro, finishPomodoro, invalidatePomodoro, interruptPomodoro, internalInterruptPomodoro, resumePomodoro;
 @synthesize growl, pomodoro, longBreakCounter, longBreakCheckerTimer;
 @synthesize prefs, scriptPanel, namePanel, breakCombo, initialTimeCombo, interruptCombo, longBreakCombo, longBreakResetComboTime, pomodorosForLong;
@@ -613,4 +613,13 @@
 	[super dealloc];
 }
 
+#pragma mark ---- Activity Inventory ----
+
+- (IBAction)showActivityInventory:(id)sender {
+    if (!mpActivityInventoryController) {
+        mpActivityInventoryController = [[ActivityInventoryController alloc] init];
+        [mpActivityInventoryController window];
+    }
+    [mpActivityInventoryController showWindow:self];
+}
 @end
